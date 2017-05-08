@@ -10,7 +10,8 @@ const Layer = (props) => {
                   key={index}
                   line={line}
                   layerNo={props.layerNo}
-                  lineNo={index} />
+                  lineNo={index}
+                  onSquareClick={props.onSquareClick} />
       })}
     </div>
   )

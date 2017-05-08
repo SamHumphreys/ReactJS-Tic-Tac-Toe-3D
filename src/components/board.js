@@ -8,7 +8,8 @@ const Board = (props) => {
         return <Layer
                   key={index}
                   layer={layer}
-                  layerNo={index} />
+                  layerNo={index}
+                  onSquareClick={props.onSquareClick} />
       })}
     </div>
   )
