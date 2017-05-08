@@ -116,7 +116,6 @@ class App extends React.Component {
                 board[2][0][2] ];
     if (a === b && a === c && a !== null) return a;
 
-
     //if none of those and there have been 27 moves it is a draw
     if (turns === 27) return 'draw';
 
