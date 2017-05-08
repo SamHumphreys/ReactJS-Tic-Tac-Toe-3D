@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Score = (props) => {
-  console.log(props);
   return (
     <div>
       <p>Player X: {props.score[0]}</p>

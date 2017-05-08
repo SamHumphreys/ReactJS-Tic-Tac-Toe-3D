@@ -10,15 +10,15 @@ class App extends React.Component {
     super ();
     this.state = {
       board:  [
-                [ ['000', '001', '002'],
-                  ['010', '011', '012'],
-                  ['020', '021', '022'] ],
-                [ ['100', '101', '102'],
-                  ['110', '111', '112'],
-                  ['120', '121', '122'] ],
-                [ ['200', '201', '202'],
-                  ['210', '211', '212'],
-                  ['220', '221', '222'] ]
+                [ [null,null,null],
+                  [null,null,null],
+                  [null,null,null] ],
+                [ [null,null,null],
+                  [null,null,null],
+                  [null,null,null] ],
+                [ [null,null,null],
+                  [null,null,null],
+                  [null,null,null] ]
               ],
       whoseTurn: 'X',
       whoWentFirst: 'X',
@@ -32,7 +32,7 @@ class App extends React.Component {
     return (
       <div>
         <Status whoseTurn={this.state.whoseTurn} winner={this.state.winner} />
-        <Board />
+        <Board board={this.state.board} />
         <Score score={this.state.score}/>
       </div>
     )
