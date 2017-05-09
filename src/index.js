@@ -6,7 +6,6 @@ import Score from './components/score';
 import checkForWinner from './logic/check-for-winner';
 import resetBoard from './logic/reset-board';
 
-
 class App extends React.Component {
   constructor () {
     super ();
