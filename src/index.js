@@ -69,28 +69,47 @@ class App extends React.Component {
       };
     };
 
-    //check layer diagonals * 6
-    for (let layer = 0; layer < board.length; layer ++) {
+    //check diagonals * 18
+    for (let i = 0; i < board.length; i ++) {
       //check top left to bottom right
-      let [a,b,c] = [ board[layer][0][0],
-                      board[layer][1][1],
-                      board[layer][2][2] ]
+      let [a,b,c] = [ board[i][0][0],
+                      board[i][1][1],
+                      board[i][2][2] ]
       if (a === b & a === c && a !== null) return a;
 
       //check top right to bottom left
-      [a,b,c] = [ board[layer][0][2],
-                  board[layer][1][1],
-                  board[layer][2][0] ];
+      [a,b,c] = [ board[i][0][2],
+                  board[i][1][1],
+                  board[i][2][0] ];
       if (a === b && a === c && a !== null) return a;
     };
 
-    //check board diagonals left to right * 3 [000, 101, 202]
+    //check board straight diagonals * 12
+    for (let i = 0; i < board.length; i ++) {
+      //check top layer left to bottom layer right
+      let [a,c,b] = [ board[0][i][0],
+                      board[1][i][1],
+                      board[2][i][2]  ];
+      if (a === b && a === c && a !== null) return a;
 
-    //check board diagonals right to left * 3 [002, 101, 200]
+      //check top layer right to bottom layer left
+      [a,c,b] = [ board[0][i][2],
+                  board[1][i][1],
+                  board[2][i][0]  ];
+      if (a === b && a === c && a !== null) return a;
 
-    //check board diagonals top to bottom * 3 [000, 110, 220]
+      //check top layer top to bottom layer bottom;
+      [a,c,b] = [ board[0][0][i],
+                  board[1][1][i],
+                  board[2][2][i]  ];
+      if (a === b && a === c && a !== null) return a;
 
-    //check board diagonals bottom to top * 3 [020, 110, 200]
+      //check top layer bottom to top layer top
+      [a,c,b] = [ board[0][2][i],
+                  board[1][1][i],
+                  board[2][0][i]  ];
+      if (a === b && a === c && a !== null) return a;
+    }
 
     //check board diagonals top left to bottom right * 1 [000, 111, 222]
     let [a,b,c] = [ board[0][0][0],
