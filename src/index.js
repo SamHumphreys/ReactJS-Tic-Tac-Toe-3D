@@ -4,6 +4,7 @@ import Board from './components/board';
 import Status from './components/status';
 import Score from './components/score';
 import checkForWinner from './logic/check-for-winner';
+import resetBoard from './logic/reset-board';
 
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
       turnCount: 0,
       score: [0,0],
       winner: null
-    }
+    };
   };
 
   handleSquareClick (sq) {
@@ -42,19 +43,30 @@ class App extends React.Component {
 
     this.setState({board, whoseTurn, turnCount}, () => {
       const winner = checkForWinner(this.state.board, this.state.turnCount);
-      if (winner) this.setState({winner});
+      if (winner) {
+        let score = this.state.score;
+        if (winner === 'X') score[0] ++;
+        if (winner === 'O') score[1] ++;
+        this.setState({winner, score});
+      };
     });
+  };
+
+  handleReset () {
+    this.setState(resetBoard(this.state.whoWentFirst));
   };
 
   render () {
     return (
       <div>
-        <Status whoseTurn={this.state.whoseTurn} winner={this.state.winner} />
+        <Status whoseTurn={this.state.whoseTurn}
+                winner={this.state.winner}
+                onResetClick={() => this.handleReset()} />
         <Board board={this.state.board} onSquareClick={sq => this.handleSquareClick(sq)}/>
         <Score score={this.state.score}/>
       </div>
     )
-  }
+  };
 };
 
 ReactDOM.render(

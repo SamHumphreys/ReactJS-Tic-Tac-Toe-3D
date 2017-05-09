@@ -3,9 +3,19 @@ import React from 'react';
 const Status = (props) => {
   if (props.winner) {
     if (props.winner === 'draw') {
-      return <p>The game is a draw :(</p>
+      return (
+        <div>
+          <p>The game is a draw :(</p>
+          <button onClick={() => props.onResetClick()}>Play again</button>
+        </div>
+      )
     } else {
-      return <p>Player {props.winner} is the winner!</p>
+      return (
+        <div>
+          <p>Player {props.winner} is the winner!</p>
+          <button onClick={() => props.onResetClick()}>Play again</button>
+        </div>
+      )
     }
   } else {
     return <p>Player {props.whoseTurn} to go next...</p>
