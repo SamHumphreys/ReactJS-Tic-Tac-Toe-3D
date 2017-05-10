@@ -5,3 +5,46 @@ body {
 p {
   margin: 0;
 }
+
+.app {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.status {
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.board {
+  width: 150px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.layer {
+  margin-bottom: 20px;
+}
+
+.square {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+.score {
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+}
