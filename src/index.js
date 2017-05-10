@@ -38,7 +38,7 @@ class App extends React.Component {
     let whoseTurn = this.state.whoseTurn;
     const turnCount = this.state.turnCount + 1;
     board[a][b][c] = whoseTurn;
-    whoseTurn = (whoseTurn === 'X' ? 'O' : 'X');
+    whoseTurn = whoseTurn === 'X' ? 'O' : 'X';
 
     this.setState({board, whoseTurn, turnCount}, () => {
       const winner = checkForWinner(this.state.board, this.state.turnCount);
@@ -60,7 +60,7 @@ class App extends React.Component {
       <div className='app' onClick={() => this.handleReset()}>
         <Status whoseTurn={this.state.whoseTurn}
                 winner={this.state.winner} />
-        <Board board={this.state.board} onSquareClick={sq => this.handleSquareClick(sq)}/>
+        <Board board={this.state.board} onSquareClick={(sq) => this.handleSquareClick(sq)}/>
         <Score score={this.state.score}/>
       </div>
     )
