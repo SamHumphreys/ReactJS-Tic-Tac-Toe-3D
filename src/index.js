@@ -5,6 +5,7 @@ import Status from './components/status';
 import Score from './components/score';
 import checkForWinner from './logic/check-for-winner';
 import resetBoard from './logic/reset-board';
+import './styles/app.css';
 
 class App extends React.Component {
   constructor () {
@@ -30,9 +31,8 @@ class App extends React.Component {
   };
 
   handleSquareClick (sq) {
-    if (this.state.winner) return;
     const [a,b,c] = [sq[0], sq[1], sq[2]];
-    if (this.state.board[a][b][c]) return;
+    if (this.state.winner || this.state.board[a][b][c]) return;
 
     let board = this.state.board.slice();
     let whoseTurn = this.state.whoseTurn;
@@ -57,7 +57,7 @@ class App extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='app'>
         <Status whoseTurn={this.state.whoseTurn}
                 winner={this.state.winner}
                 onResetClick={() => this.handleReset()} />
@@ -70,5 +70,5 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App />,
-  document.getElementById('app')
+  document.getElementById('root')
 );
