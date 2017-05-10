@@ -12,7 +12,7 @@ const Status = (props) => {
     } else {
       return (
         <div>
-          <p>Player {props.winner} is the winner!</p>
+          <p>{props.winner} won the game!</p>
           <button onClick={() => props.onResetClick()}>Play again</button>
         </div>
       )
