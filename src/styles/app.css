@@ -14,20 +14,21 @@ p {
 }
 
 .status {
-  width: 150px;
+  width: 200px;
   display: inline-block;
   vertical-align: top;
+  margin-top: 230px;
 }
 
 .board {
-  width: 150px;
+  width: 200px;
   text-align: center;
   display: inline-block;
   vertical-align: top;
 }
 
 .layer {
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .square {
@@ -44,7 +45,8 @@ p {
 }
 
 .score {
-  width: 150px;
+  width: 200px;
   display: inline-block;
   vertical-align: top;
+  margin-top: 220px;
 }

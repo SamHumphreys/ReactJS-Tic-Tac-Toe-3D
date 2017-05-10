@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/status.css';
 
 const Status = (props) => {
   if (props.winner) {
@@ -7,14 +6,14 @@ const Status = (props) => {
       return (
         <div className='status'>
           <p>The game is a draw :(</p>
-          <button onClick={() => props.onResetClick()}>Click to play again</button>
+          <p>Click anywhere to play again!</p>
         </div>
       )
     } else {
       return (
         <div className='status'>
           <p>{props.winner} won the game!</p>
-          <button onClick={() => props.onResetClick()}>Click to play again</button>
+          <p>Click anywhere to play again!</p>
         </div>
       )
     }

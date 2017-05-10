@@ -52,15 +52,14 @@ class App extends React.Component {
   };
 
   handleReset () {
-    this.setState(resetBoard(this.state.whoWentFirst));
+    if (this.state.winner) this.setState(resetBoard(this.state.whoWentFirst));
   };
 
   render () {
     return (
-      <div className='app'>
+      <div className='app' onClick={() => this.handleReset()}>
         <Status whoseTurn={this.state.whoseTurn}
-                winner={this.state.winner}
-                onResetClick={() => this.handleReset()} />
+                winner={this.state.winner} />
         <Board board={this.state.board} onSquareClick={sq => this.handleSquareClick(sq)}/>
         <Score score={this.state.score}/>
       </div>

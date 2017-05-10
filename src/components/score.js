@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/score.css';
 
 const Score = (props) => {
   return (

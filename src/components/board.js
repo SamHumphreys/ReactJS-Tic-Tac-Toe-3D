@@ -1,6 +1,5 @@
 import React from 'react';
 import Layer from './layer';
-import '../styles/board.css';
 
 const Board = (props) => {
   return (
