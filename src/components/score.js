@@ -5,7 +5,7 @@ const Score = (props) => {
     <div className='score'>
       <p>Scores...</p>
       <p>Player X: {props.score[0]}</p>
-      <p>Player Y: {props.score[1]}</p>
+      <p>Player O: {props.score[1]}</p>
     </div>
   )
 };

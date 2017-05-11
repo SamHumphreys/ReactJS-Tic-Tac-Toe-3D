@@ -14,14 +14,14 @@ p {
 }
 
 .status {
-  width: 200px;
+  width: 250px;
   display: inline-block;
   vertical-align: top;
   margin-top: 230px;
 }
 
 .board {
-  width: 200px;
+  width: 250px;
   text-align: center;
   display: inline-block;
   vertical-align: top;
@@ -55,7 +55,7 @@ p {
 }
 
 .score {
-  width: 200px;
+  width: 250px;
   display: inline-block;
   vertical-align: top;
   margin-top: 220px;
