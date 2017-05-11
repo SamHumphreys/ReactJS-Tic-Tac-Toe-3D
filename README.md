@@ -31,6 +31,10 @@ When there is a winning state the squares no longer change colour based on their
 
 Double clicking the board when there is a winning state will call the handleReset function in index.js causing the board to be reset, and whoever didn't go first in the previous game will go first in this round.
 
+Responsiveness
+--------------
+The app has 2 breakpoints, at 800px and 500px horizontally. These cause the width of the status, board, and score elements to resize at 800px, and then stack vertically at 500px.
+
 Cool beans
 -----------
 I'm glad I got this working! ReactJS is pretty cool.
@@ -42,5 +46,5 @@ Deploying to Heroku caused a few problems, but I got better at using Git as a re
 ToDos
 ------
 * Add a screen at the start to better explain 3D tic tac toe.
-* Styling - improve visually and make responsive
+* Styling - improve visually
 * Testing
