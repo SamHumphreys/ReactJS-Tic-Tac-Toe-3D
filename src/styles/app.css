@@ -25,7 +25,7 @@ p {
 }
 
 .reset {
-  margin: 10px auto;
+  margin: 4px auto 0;
 }
 
 .board {
@@ -83,7 +83,7 @@ p {
   }
 
   .layer {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .score {
@@ -95,7 +95,7 @@ p {
 
   .main {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 5px;
   }
 
   .status {
@@ -104,12 +104,5 @@ p {
 
   .reset {
     width: 100%;
-  }
-
-  .layer {
-  }
-
-  .score {
-    margin-top: 15px;
   }
 }
