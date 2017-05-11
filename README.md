@@ -12,9 +12,12 @@ I made this app to get more familiar with ReactJS, and to replace my previous Ti
 Game flow:
 ----------
 On loading 3 components are rendered with information from the state of index.js:
-  Status: shows whose turn it is, and whether or not there is a winner
-  Board: displays the game board by mapping the board into <Layer />, which maps each layer into <Line />, which maps each line into <Square />.
-  Score: displays the score
+
+  *Status: shows whose turn it is, and whether or not there is a winner
+
+  *Board: displays the game board by mapping the board into <Layer />, which maps each layer into <Line />, which maps each line into <Square />.
+
+  *Score: displays the score
 
 When a square is clicked it passes the square coordinates up to index.js which
 calls the handleSquareClick function. This checks whether or not the square is
