@@ -14,24 +14,22 @@ Game flow:
 On loading 3 components are rendered with information from the state of index.js:
 
   * Status: shows whose turn it is, and whether or not there is a winner
-
-  * Board: displays the game board by mapping the board into <Layer />, which maps each layer into <Line />, which maps each line into <Square />.
-
+  * Board: displays the game board by mapping the board into Layers, which maps each layer into Lines, which maps each line into Squares.
   * Score: displays the score
 
-When a square is clicked it passes the square coordinates up to index.js which
+Initially all of the squares are available to click on, and will turn green when they're hovered over.
+
+When an available square is clicked it passes the square coordinates up to index.js which
 calls the handleSquareClick function. This checks whether or not the square is
 available, and if so it will update state.board to reflect the new game state.
 
-When the state is updated it will check the board to see if there is a winner, and if so will update state.winner.
+When the state is updated it will check the board to see if there is a winning solution or if the game is a draw, and if so will update state.winner accordingly.
 
 When a square in the game state has been taken it will cause the square to be unclickable, and also to turn red when hovered over.
 
-If there is a winning state the squares no longer change colour based on their availability.
+When there is a winning state the squares no longer change colour based on their availability, and the status component updates to show who won or if it is a draw, and the scores are updated accordingly.
 
-When there is a winning state the status component updates to show who won or if it is a draw, and the scores are updated accordingly.
-
-Double clicking the board when there is a winning state will reset the board to be blank, and whoever didn't go first in the previous game will go first in this round.
+Double clicking the board when there is a winning state will call the handleReset function in index.js causing the board to be reset, and whoever didn't go first in the previous game will go first in this round.
 
 Cool beans
 -----------
