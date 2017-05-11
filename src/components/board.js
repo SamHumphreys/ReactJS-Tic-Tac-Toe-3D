@@ -9,6 +9,7 @@ const Board = (props) => {
                   key={index}
                   layer={layer}
                   layerNo={index}
+                  winner={props.winner}
                   onSquareClick={props.onSquareClick} />
       })}
     </div>

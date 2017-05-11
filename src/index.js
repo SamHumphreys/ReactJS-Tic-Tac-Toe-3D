@@ -60,7 +60,9 @@ class App extends React.Component {
       <div className='app' onDoubleClick={() => this.handleReset()}>
         <Status whoseTurn={this.state.whoseTurn}
                 winner={this.state.winner} />
-        <Board board={this.state.board} onSquareClick={(sq) => this.handleSquareClick(sq)}/>
+        <Board board={this.state.board}
+                onSquareClick={(sq) => this.handleSquareClick(sq)}
+                winner={this.state.winner} />
         <Score score={this.state.score}/>
       </div>
     )

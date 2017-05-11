@@ -44,6 +44,16 @@ p {
   cursor: pointer;
 }
 
+.free:hover {
+  background: #5F5;
+  transition: 0.5s;
+}
+
+.taken:hover {
+  background: #F55;
+  transition: 0.5s;
+}
+
 .score {
   width: 200px;
   display: inline-block;

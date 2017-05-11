@@ -11,6 +11,7 @@ const Line = (props) => {
                   lineNo={props.lineNo}
                   squareNo={index}
                   square={square}
+                  winner={props.winner}
                   onSquareClick={props.onSquareClick} />
       })}
     </div>
