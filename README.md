@@ -1,7 +1,8 @@
 3D Tic Tac Toe
 ----------------
 
-repo: https://github.com/SamHumphreys/ReactJS-Tic-Tac-Toe-3D \n
+repo: https://github.com/SamHumphreys/ReactJS-Tic-Tac-Toe-3D
+
 online: https://tic-tac-toe-3d.herokuapp.com
 
 This is 3 dimensional tic tac toe game using ReactJS, created using the Create-React-App boilerplate, and deployed to Heroku.
