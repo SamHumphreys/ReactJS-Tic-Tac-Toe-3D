@@ -5,6 +5,7 @@ import Status from './components/status';
 import Score from './components/score';
 import checkForWinner from './logic/check-for-winner';
 import resetBoard from './logic/reset-board';
+import LoadScreen from './components/load-screen';
 import './styles/app.css';
 
 class App extends React.Component {
@@ -26,7 +27,8 @@ class App extends React.Component {
       whoWentFirst: 'X',
       turnCount: 0,
       score: [0,0],
-      winner: null
+      winner: null,
+      loadShown: false
     };
   };
 
@@ -55,17 +57,25 @@ class App extends React.Component {
     if (this.state.winner) this.setState(resetBoard(this.state.whoWentFirst));
   };
 
+  handleLoadShown () {
+    this.setState({loadShown: true});
+  };
+
   render () {
-    return (
-      <div className='app' onClick={() => this.handleReset()}>
-        <Status whoseTurn={this.state.whoseTurn}
-                winner={this.state.winner} />
-        <Board board={this.state.board}
-                onSquareClick={(sq) => this.handleSquareClick(sq)}
-                winner={this.state.winner} />
-        <Score score={this.state.score}/>
-      </div>
-    )
+    if (this.state.loadShown === false) {
+      return <LoadScreen loadScreenShown={() => this.handleLoadShown()} />
+    } else {
+      return (
+        <div className='app' onClick={() => this.handleReset()}>
+          <Status whoseTurn={this.state.whoseTurn}
+                  winner={this.state.winner} />
+          <Board board={this.state.board}
+                  onSquareClick={(sq) => this.handleSquareClick(sq)}
+                  winner={this.state.winner} />
+          <Score score={this.state.score}/>
+        </div>
+      )
+    }
   };
 };
 

@@ -36,7 +36,6 @@ const checkForWinner = (board, turns) => {
                 board[i][2][0] ];
     if (a && a === b && a === c) return a;
 
-    //check board straight diagonals * 12
     //check top layer left to bottom layer right
     [a,c,b] = [ board[0][i][0],
                 board[1][i][1],
