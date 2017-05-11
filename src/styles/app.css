@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  min-width: 300px;
 }
 
 p {
@@ -13,15 +14,21 @@ p {
   vertical-align: top;
 }
 
-.status {
+.main {
   width: 250px;
+}
+
+.status {
   display: inline-block;
   vertical-align: top;
   margin-top: 230px;
 }
 
+.reset {
+  margin: 10px auto;
+}
+
 .board {
-  width: 250px;
   text-align: center;
   display: inline-block;
   vertical-align: top;
@@ -55,7 +62,6 @@ p {
 }
 
 .score {
-  width: 250px;
   display: inline-block;
   vertical-align: top;
   margin-top: 220px;
@@ -64,16 +70,43 @@ p {
 
 @media (max-width: 800px) {
   .main {
-    width: 100%;
+    width: 150px;
   }
 
   .status {
-    margin-top: 15px;
+    margin-top: 200px;
     height: 40px;
+  }
+
+  .reset {
+    width: 140px;
   }
 
   .layer {
     margin-top: 15px;
+  }
+
+  .score {
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .main {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .status {
+    height: 40px;
+  }
+
+  .reset {
+    width: 100%;
+  }
+
+  .layer {
   }
 
   .score {

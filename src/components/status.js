@@ -6,14 +6,14 @@ const Status = (props) => {
       return (
         <div className='status main'>
           <p>The game is a draw :(</p>
-          <p>Click anywhere to play again!</p>
+          <p className='reset'>Click anywhere to play again!</p>
         </div>
       )
     } else {
       return (
         <div className='status main'>
           <p>{props.winner} won the game!</p>
-          <p>Click anywhere to play again!</p>
+          <p className='reset'>Click anywhere to play again!</p>
         </div>
       )
     }
