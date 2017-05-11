@@ -1,5 +1,5 @@
 # dependencies
-*/.cache
+/.cache/*
 
 # testing
 /coverage
