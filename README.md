@@ -1,4 +1,4 @@
-##3D Tic Tac Toe
+3D Tic Tac Toe
 ----------------
 
 repo: https://github.com/SamHumphreys/ReactJS-Tic-Tac-Toe-3D \n
@@ -8,7 +8,7 @@ This is 3 dimensional tic tac toe game using ReactJS, created using the Create-R
 
 I made this app to get more familiar with ReactJS, and to replace my previous Tic Tac Toe app (built using JQuery) on my portfolio.
 
-#Game flow:
+Game flow:
 ----------
 On loading 3 components are rendered with information from the state of index.js:
   Status: shows whose turn it is, and whether or not there is a winner
@@ -29,15 +29,15 @@ When there is a winning state the status component updates to show who won or if
 
 Double clicking the board when there is a winning state will reset the board to be blank, and whoever didn't go first in the previous game will go first in this round.
 
-#Cool beans
+Cool beans
 -----------
 I'm glad I got this working! ReactJS is pretty cool.
 
-#Sore beans
+Sore beans
 -----------
 Deploying to Heroku caused a few problems, but I got better at using Git as a result... so win?
 
-#ToDos
+ToDos
 ------
 * Add a screen at the start to better explain 3D tic tac toe.
 * Styling - improve visually and make responsive
