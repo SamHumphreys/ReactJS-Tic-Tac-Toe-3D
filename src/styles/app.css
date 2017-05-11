@@ -60,3 +60,23 @@ p {
   vertical-align: top;
   margin-top: 220px;
 }
+
+
+@media (max-width: 800px) {
+  .main {
+    width: 100%;
+  }
+
+  .status {
+    margin-top: 15px;
+    height: 40px;
+  }
+
+  .layer {
+    margin-top: 15px;
+  }
+
+  .score {
+    margin-top: 15px;
+  }
+}

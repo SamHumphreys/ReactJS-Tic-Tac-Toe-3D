@@ -57,7 +57,7 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className='app' onDoubleClick={() => this.handleReset()}>
+      <div className='app' onClick={() => this.handleReset()}>
         <Status whoseTurn={this.state.whoseTurn}
                 winner={this.state.winner} />
         <Board board={this.state.board}

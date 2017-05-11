@@ -3,7 +3,7 @@ import Layer from './layer';
 
 const Board = (props) => {
   return (
-    <div className='board'>
+    <div className='board main'>
       {props.board.map((layer, index) => {
         return <Layer
                   key={index}
