@@ -11,7 +11,7 @@ export default class LoadScreen extends React.Component {
       intervalId: null,
       board: [
                 [
-                  [null, null, null],
+                  ['X', 'X', 'X'],
                   [null, null, null],
                   [null, null, null]
                 ],
@@ -31,15 +31,14 @@ export default class LoadScreen extends React.Component {
 
   componentDidMount () {
     const intervalId = setInterval(() => {
-      const demoNo = this.state.demoNo + 1;
+      const demoNo = (this.state.demoNo + 1) % 5;
       this.setState({intervalId, demoNo}, () => {
-        DemoBoards(this.state.demoNo);
+        this.setState({board: DemoBoards(this.state.demoNo)});
       });
-    }, 3000);
+    }, 2000);
   };
 
   componentWillUnmount () {
-    console.log('bye bye');
     clearInterval(this.state.intervalId);
   };
 
