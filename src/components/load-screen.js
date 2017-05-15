@@ -8,6 +8,7 @@ export default class LoadScreen extends React.Component {
 
     this.state = {
       demoNo: 0,
+      intervalId: null,
       board: [
                 [
                   [null, null, null],
@@ -29,12 +30,17 @@ export default class LoadScreen extends React.Component {
   };
 
   componentDidMount () {
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       const demoNo = this.state.demoNo + 1;
-      this.setState({demoNo}, () => {
+      this.setState({intervalId, demoNo}, () => {
         DemoBoards(this.state.demoNo);
       });
     }, 3000);
+  };
+
+  componentWillUnmount () {
+    console.log('bye bye');
+    clearInterval(this.state.intervalId);
   };
 
   handleSquareClick () {};
