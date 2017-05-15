@@ -67,6 +67,14 @@ p {
   margin-top: 220px;
 }
 
+.load-screen *:hover {
+  background: white;
+}
+
+.load-screen > .board > .layer > .line > .taken {
+  background: red;
+}
+
 
 @media (max-width: 800px) {
   .main {
