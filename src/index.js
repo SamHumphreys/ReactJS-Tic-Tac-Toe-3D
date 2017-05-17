@@ -63,7 +63,7 @@ class App extends React.Component {
 
   render () {
     if (this.state.loadShown === false) {
-      return <LoadScreen loadScreenShown={() => this.handleLoadShown()} />
+      return <LoadScreen skipTutorial={() => this.handleLoadShown()} />
     } else {
       return (
         <div className='app' onClick={() => this.handleReset()}>

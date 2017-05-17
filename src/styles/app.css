@@ -67,7 +67,26 @@ p {
   margin-top: 220px;
 }
 
-.load-screen *:hover {
+/*----------------------Load screen styles-----------------*/
+
+.load-screen {
+  text-align: center;
+}
+
+.load-screen > h1 {
+  margin-bottom: 5px;
+}
+
+.load-screen > h2 {
+  margin-bottom: 0;
+}
+
+.load-screen > .board {
+  margin-bottom: 30px;
+}
+
+.load-screen > .board > .layer > .line > .free:hover {
+  cursor: default;
   background: white;
 }
 
@@ -75,6 +94,19 @@ p {
   background: red;
 }
 
+.load-screen > p {
+  margin: 0 auto 1em;
+  max-width: 630px;
+}
+
+.load-screen > button {
+  height: 45px;
+  width: 115px;
+  border-radius: .5em;
+}
+
+
+/*----------------------------------------------------*/
 
 @media (max-width: 800px) {
   .main {
