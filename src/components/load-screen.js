@@ -1,6 +1,7 @@
 import React from 'react';
 import Board from './board';
 import DemoBoards from '../logic/demo-boards';
+import '../styles/load_screen.css';
 
 export default class LoadScreen extends React.Component {
   constructor(props) {
@@ -54,7 +55,7 @@ export default class LoadScreen extends React.Component {
 
         <p>This means that there are now 49 winning combinations instead of the 8 winning combination in normal Tic Tac Toe.... WOOOOO!</p>
 
-        <p>Below are some examples of winning combinations.</p>
+        <p>Scroll down for some examples of winning combinations.</p>
         <button onClick={()=>this.props.loadScreenShown()}>Ok, I've got it... take me to the game!</button>
 
         <h2>Examples of winning combinations...</h2>
