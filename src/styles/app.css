@@ -77,15 +77,7 @@ p {
   margin-bottom: 5px;
 }
 
-@keyframes fade-in-out {
-  0%    {background: white}
-  50%   {background: #5F5}
-  100%  {background: white}
-}
 
-.load-screen > .click-skip {
-  animation: fade-in-out 1s infinite
-}
 
 .load-screen > h2 {
   margin-bottom: 0;
@@ -107,6 +99,17 @@ p {
 .load-screen > p {
   margin: 0 auto 1em;
   max-width: 630px;
+}
+
+@keyframes fade-in-out {
+  0%    {background: white}
+  50%   {background: #5F5}
+  100%  {background: white}
+}
+
+.load-screen > .click-skip {
+  animation: fade-in-out 1s infinite;
+  width: 260px;
 }
 
 .load-screen > button {
