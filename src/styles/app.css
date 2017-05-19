@@ -45,6 +45,7 @@ p {
   border: 1px solid black;
   height: 40px;
   width: 40px;
+  font-size: 36px;
 }
 
 .square:hover {
