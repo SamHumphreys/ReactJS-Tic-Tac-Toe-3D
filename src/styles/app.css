@@ -77,8 +77,6 @@ p {
   margin-bottom: 5px;
 }
 
-
-
 .load-screen > h2 {
   margin-bottom: 0;
 }
@@ -142,7 +140,13 @@ p {
   .score {
     margin-top: 200px;
   }
+
+  .load-screen > p {
+    max-width: 500px;
+  }
 }
+
+
 
 @media (max-width: 500px) {
 
@@ -157,5 +161,17 @@ p {
 
   .reset {
     width: 100%;
+  }
+
+  .load-screen > h1 {
+    font-size: 25px;
+  }
+
+  .load-screen > h2 {
+    font-size: 17px;
+  }
+
+  .load-screen > p {
+    max-width: 295px;
   }
 }
